@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Royal Collections | Chavan Pheta</title>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#050505;
+            color:white;
+            font-family:'Poppins', sans-serif;
+            overflow-x:hidden;
+        }
+
+        /* NAVBAR */
+
+        nav{
+
+            width:100%;
+            padding:25px 8%;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            background:black;
+
+            border-bottom:1px solid rgba(255,215,0,0.08);
+
+            position:sticky;
+            top:0;
+            z-index:1000;
+
+        }
+
+        .logo{
+
+            font-size:42px;
+            font-family:'Cinzel', serif;
+            color:gold;
+            font-weight:700;
+
+        }
+
+        nav ul{
+
+            display:flex;
+            gap:35px;
+            list-style:none;
+
+        }
+
+        nav ul li a{
+
+            text-decoration:none;
+            color:white;
+            letter-spacing:2px;
+            font-size:14px;
+
+            transition:0.3s;
+
+        }
+
+        nav ul li a:hover{
+
+            color:gold;
+
+        }
+
+        /* HERO */
+
+        .hero{
+
+            padding:120px 8% 70px;
+            text-align:center;
+
+        }
+
+        .hero h1{
+
+            font-size:85px;
+            color:gold;
+            font-family:'Cinzel', serif;
+
+            margin-bottom:25px;
+
+        }
+
+        .hero p{
+
+            width:60%;
+            margin:auto;
+
+            color:#bdbdbd;
+            line-height:1.9;
+            font-size:18px;
+
+        }
+
+        /* COLLECTIONS */
+
+        .collection-container{
+
+            padding:20px 8% 120px;
+
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+
+            gap:35px;
+
+        }
+
+        .collection-card{
+
+            background:#111;
+
+            border-radius:30px;
+            overflow:hidden;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+            transition:0.4s;
+
+        }
+
+        .collection-card:hover{
+
+            transform:translateY(-12px);
+
+            box-shadow:
+            0px 0px 30px rgba(255,215,0,0.12);
+
+        }
+
+        .collection-card img{
+
+            width:100%;
+            height:420px;
+
+            object-fit:cover;
+
+        }
+
+        .collection-info{
+
+            padding:30px;
+
+        }
+
+        .collection-info h2{
+
+            color:gold;
+            margin-bottom:15px;
+            font-size:28px;
+
+        }
+
+        .collection-info p{
+
+            color:#cfcfcf;
+            line-height:1.8;
+
+            margin-bottom:20px;
+
+        }
+
+        .price{
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+        }
+
+        .price span{
+
+            font-size:26px;
+            font-weight:bold;
+
+        }
+
+        .btn{
+
+            padding:12px 22px;
+
+            background:gold;
+            color:black;
+
+            text-decoration:none;
+
+            border-radius:40px;
+
+            font-weight:600;
+
+            transition:0.3s;
+
+        }
+
+        .btn:hover{
+
+            background:white;
+
+        }
+
+        /* PREMIUM BANNER */
+
+        .premium-banner{
+
+            margin:0 8% 120px;
+
+            padding:80px;
+
+            border-radius:40px;
+
+            background:
+            linear-gradient(
+            135deg,
+            rgba(255,215,0,0.08),
+            rgba(255,255,255,0.02)
+            );
+
+            text-align:center;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .premium-banner h2{
+
+            font-size:60px;
+            color:gold;
+
+            font-family:'Cinzel', serif;
+
+            margin-bottom:25px;
+
+        }
+
+        .premium-banner p{
+
+            width:70%;
+            margin:auto;
+
+            color:#cfcfcf;
+
+            line-height:1.9;
+            font-size:18px;
+
+            margin-bottom:40px;
+
+        }
+
+        /* FOOTER */
+
+        footer{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    color:white;
+    background:#000;
+    border-top:1px solid rgba(255,215,0,0.2);
+    font-size:16px;
+}
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px){
+
+            .collection-container{
+
+                grid-template-columns:1fr;
+
+            }
+
+            .hero p,
+            .premium-banner p{
+
+                width:100%;
+
+            }
+
+        }
+
+        @media(max-width:768px){
+
+            nav{
+
+                flex-direction:column;
+                gap:20px;
+
+            }
+
+            nav ul{
+
+                flex-wrap:wrap;
+                justify-content:center;
+
+            }
+
+            .hero h1{
+
+                font-size:55px;
+
+            }
+
+            .premium-banner h2{
+
+                font-size:42px;
+
+            }
+
+        }
+        .whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(37,211,102,0.5);
+
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+    <div class="logo">
+
+        Chavan Pheta
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">HOME</a></li>
+
+        <li><a href="/collection/">COLLECTIONS</a></li>
+
+        <li><a href="/weddings/">WEDDINGS</a></li>
+
+        <li><a href="/custom-orders/">CUSTOM ORDERS</a></li>
+
+        <li><a href="/contact/">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Royal Collections</h1>
+
+        <p>
+
+            Explore our handcrafted premium pheta collections
+            designed for royal weddings, celebrations,
+            cultural events, and grand occasions.
+
+        </p>
+
+    </section>
+
+    <!-- COLLECTIONS -->
+
+    <section class="collection-container">
+        <div class="collection-card">
+
+    <img src="/static/images/white-golden.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Royal Ivory Pheta</h2>
+
+        <p>
+            Handcrafted royal pheta designed for grand wedding occasions.
+        </p>
+
+        <div class="price">
+
+            <span>₹4999</span>
+
+            <a href="/custom-orders/?pheta=Royal Ivory Pheta" class="btn">
+            Order
+            </a>
+         
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/ivorywhite.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Ivory Wedding Pheta</h2>
+
+        <p>
+            Handcrafted royal pheta designed for grand wedding occasions.
+        </p>
+
+        <div class="price">
+
+            <span>₹4799</span>
+
+<a href="/custom-orders/?pheta=Ivory Wedding Pheta" class="btn">
+    Order
+</a>
+        </div>
+
+    </div>
+
+</div>
+     <div class="collection-card">
+
+    <img src="/static/images/redplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Royal Red Pheta</h2>
+
+        <p>
+            Handcrafted royal pheta designed for grand wedding occasions.
+        </p>
+
+        <div class="price">
+
+            <span>₹4599</span>
+
+<a href="/custom-orders/?pheta=Royal Red Pheta" class="btn">
+    Order
+</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/maroon-golden.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Royal Maroon Pheta</h2>
+
+        <p>
+            Handcrafted royal pheta designed for grand wedding occasions.
+
+        <div class="price">
+
+            <span>₹4499</span>
+
+<a href="/custom-orders/?pheta=Royal Maroon Pheta" class="btn">
+    Order
+</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/maroon-white.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Heritage Maroon Pheta</h2>
+
+        <p>
+           Handcrafted royal pheta designed for grand wedding occasions.
+
+        <div class="price">
+
+            <span>₹4399</span>
+
+<a href="/custom-orders/?pheta=Heritage Maroon Pheta" class="btn">
+    Order
+</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/goldenplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Royal Gold Pheta</h2>
+
+        <p>
+            Handcrafted royal pheta designed for grand wedding occasions.
+        </p>
+
+        <div class="price">
+
+            <span>₹4299</span>
+
+            <a href="/custom-orders/?pheta=Royal Gold Pheta" class="btn">
+    Order
+</a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/lightpinkplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Blush Pink Pheta</h2>
+
+        <p>
+           Handcrafted royal pheta designed for grand wedding occasions.
+        </p>
+
+        <div class="price">
+
+            <span>₹4199</span>
+
+            <a href="/custom-orders/?pheta=Blush Pink Pheta" class="btn">
+            Order
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/darkpinkplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Royal Pink Pheta</h2>
+
+        <p>
+           Handcrafted royal pheta designed for grand wedding occasions.
+
+        <div class="price">
+
+            <span>₹4099</span>
+
+            <a href="/custom-orders/?pheta=Royal Pink Pheta" class="btn">
+            Order
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/orangeplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Kesari Royal Pheta</h2>
+
+        <p>
+            Handcrafted royal pheta designed for grand wedding occasions.
+        </p>
+
+        <div class="price">
+
+            <span>₹3999</span>
+
+           <a href="/custom-orders/?pheta=Kesari Royal Pheta" class="btn">
+            Order
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/maroonplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Royal Maroon Pheta</h2>
+
+        <p>
+          Handcrafted royal pheta designed for grand wedding occasions.
+
+        <div class="price">
+
+            <span>₹3899</span>
+
+           <a href="/custom-orders/?pheta=Royal Maroon Pheta" class="btn">
+            Order
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/whiteplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Classic Ivory Pheta</h2>
+
+        <p>
+           Handcrafted royal pheta designed for grand wedding occasions.
+
+        <div class="price">
+
+            <span>₹3799</span>
+
+            <a href="/custom-orders/?pheta=Classic Ivory Pheta" class="btn">
+            Order
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<div class="collection-card">
+
+    <img src="/static/images/blueplain.jpg" alt="">
+
+    <div class="collection-info">
+
+        <h2>Traditional Blue Pheta</h2>
+
+        <p>
+           Handcrafted royal pheta designed for grand wedding occasions.
+
+        <div class="price">
+
+            <span>₹3799</span>
+
+            <a href="/custom-orders/?pheta=Traditional Blue Pheta" class="btn">
+            Order
+            </a>
+        </div>
+
+    </div>
+
+</div>
+    </section>
+
+    <!-- PREMIUM BANNER -->
+
+    <section class="premium-banner">
+
+        <h2>Custom Wedding Orders</h2>
+
+        <p>
+
+            We provide premium handcrafted pheta collections,
+            dulha special designs, and live pheta tying services
+            for weddings and royal events.
+
+        </p>
+
+        <a href="/custom-orders/" class="btn">
+    Book Wedding Service
+</a>
+
+    </section>
+    
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Chavan Pheta • Royal Indian Turbans
+
+    </footer>
+
+
+</body>
+</html>
+
+<a href="https://wa.me/919370968201"
+   class="whatsapp-float"
+   target="_blank">
+
+    💬
+
+</a>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Orders | Chavan Pheta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            background:#050505;
+            color:white;
+            font-family:'Poppins', sans-serif;
+
+        }
+
+        /* NAVBAR */
+
+        nav{
+
+            width:100%;
+            padding:25px 8%;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            background:black;
+
+            border-bottom:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .logo{
+
+            font-size:42px;
+            color:gold;
+            font-family:'Cinzel', serif;
+            font-weight:700;
+
+        }
+
+        nav ul{
+
+            display:flex;
+            gap:35px;
+            list-style:none;
+
+        }
+
+        nav ul li a{
+
+            text-decoration:none;
+            color:white;
+            letter-spacing:2px;
+            font-size:14px;
+
+            transition:0.3s;
+
+        }
+
+        nav ul li a:hover{
+
+            color:gold;
+
+        }
+
+        /* HERO */
+
+        .hero{
+
+            padding:100px 8% 60px;
+
+            text-align:center;
+
+        }
+
+        .hero h1{
+
+            font-size:80px;
+            color:gold;
+
+            font-family:'Cinzel', serif;
+
+            margin-bottom:25px;
+
+        }
+
+        .hero p{
+
+            width:60%;
+            margin:auto;
+
+            color:#bdbdbd;
+
+            line-height:1.9;
+            font-size:18px;
+
+        }
+
+        /* FORM SECTION */
+
+        .form-section{
+
+            padding:20px 8% 120px;
+
+            display:flex;
+            justify-content:center;
+
+        }
+
+        .order-form{
+
+            width:100%;
+            max-width:850px;
+
+            background:#111;
+
+            padding:50px;
+
+            border-radius:35px;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .input-box{
+
+            margin-bottom:25px;
+
+        }
+
+        .input-box label{
+
+            display:block;
+
+            margin-bottom:12px;
+
+            color:gold;
+
+            font-size:16px;
+
+        }
+
+        .input-box input,
+        .input-box textarea,
+        .input-box select{
+
+            width:100%;
+
+            padding:18px;
+
+            background:#1a1a1a;
+
+            border:none;
+            outline:none;
+
+            border-radius:15px;
+
+            color:white;
+
+            font-size:16px;
+
+        }
+
+        .input-box textarea{
+
+            height:180px;
+            resize:none;
+
+        }
+
+        .submit-btn{
+
+            width:100%;
+
+            padding:18px;
+
+            background:gold;
+            color:black;
+
+            border:none;
+
+            border-radius:50px;
+
+            font-size:18px;
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.3s;
+
+        }
+
+        .submit-btn:hover{
+
+            background:white;
+
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px){
+
+            .hero h1{
+
+                font-size:55px;
+
+            }
+
+            .hero p{
+
+                width:100%;
+
+            }
+
+            .order-form{
+
+                padding:30px;
+
+            }
+
+            /* IMPORTANT NOTE */
+
+.important-note{
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,215,0,0.12),
+    rgba(255,255,255,0.02)
+    );
+
+    border:1px solid rgba(255,215,0,0.2);
+
+    padding:45px;
+
+    border-radius:25px;
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+}
+
+.important-note h3{
+
+    color:gold;
+
+    margin-bottom:35px;
+
+    font-size:28px;
+
+    font-family:'Cinzel', serif;
+
+}
+
+.important-note p{
+
+    color:#e0e0e0;
+
+    line-height:2.2;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+}
+.important-note{
+    margin-top:50px;
+    padding:25px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:20px;
+}
+
+.important-note h3{
+
+    color:gold;
+    margin-bottom:18px;
+
+}
+
+.important-note p{
+
+    color:white;
+    line-height:2.1;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+
+}
+        }
+        footer{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    color:white;
+    background:#000;
+    border-top:1px solid rgba(255,215,0,0.2);
+    font-size:16px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+    cursor: pointer;
+}
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(37,211,102,0.5);
+
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+   <nav>
+
+    <div class="logo">
+
+        Chavan Pheta
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">HOME</a></li>
+
+        <li><a href="/collection/">COLLECTIONS</a></li>
+
+        <li><a href="/weddings/">WEDDINGS</a></li>
+
+        <li><a href="/custom-orders/">CUSTOM ORDERS</a></li>
+
+        <li><a href="/contact/">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Custom Orders</h1>
+
+        <p>
+
+            Order handcrafted premium pheta collections
+            for weddings, royal celebrations,
+            cultural events, and special occasions.
+
+        </p>
+
+    </section>
+
+    <!-- FORM -->
+
+    <section class="form-section">
+
+    <form class="order-form" method="POST">
+
+        {% csrf_token %}
+            <!-- NAME -->
+
+            <div class="input-box">
+
+                <label>Full Name</label>
+
+            <input type="text" name="full_name" placeholder="Enter your full name"required>
+            </div>
+
+            <!-- PHONE -->
+
+            <div class="input-box">
+
+                <label>Phone Number</label>
+
+<input type="text" name="phone_number" placeholder="Enter your mobile number"required>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-box">
+
+                <label>Email Address</label>
+
+<input type="email" name="email" placeholder="Enter your email"required>
+            </div>
+<!-- COUNTRY -->
+
+<div class="input-box">
+
+    <label>Country</label>
+
+    <select name="country" required>
+
+        <option value="">Select Country</option>
+
+        <option value="India">India</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Canada">Canada</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+        <option value="UAE">UAE</option>
+        <option value="Other">Other</option>
+
+    </select>
+
+</div>
+
+<!-- CITY -->
+
+<div class="input-box">
+
+    <label>City</label>
+
+    <input type="text"
+           name="city"
+           placeholder="Enter your city"required>
+
+</div>
+
+<!-- FULL DELIVERY ADDRESS -->
+
+<div class="input-box">
+
+    <label>Delivery Address</label>
+
+    <textarea name="address"
+    placeholder="Enter complete delivery address"required></textarea>
+
+</div>
+
+<!-- ORDER TYPE -->
+
+<div class="input-box">
+
+    <label>Order Type</label>
+
+    <select name="order_type">
+
+        <option value="Handmade Pheta"required>
+            Handmade Pheta Delivery
+        </option>
+
+        <option value="Wedding Service"required>
+            Live Wedding Service
+        </option>
+
+    </select>
+
+</div>
+<div class="input-box">
+
+    <label>Selected Pheta</label>
+
+    <input type="text"
+           name="selected_pheta"
+           value="{{ selected_pheta }}"
+           readonly>
+
+</div>
+
+
+<div class="input-box">
+
+    <label>Quantity</label>
+
+    <input type="number"
+           name="quantity"
+           min="1"
+           value="1"
+           required>
+
+</div>
+            <!-- PHETA TYPE -->
+
+    
+            
+
+            <!-- DATE -->
+
+            <div class="input-box">
+
+                <label>Wedding / Event Date</label>
+
+<input type="date" name="event_date"required>
+            </div>
+
+           
+            
+            <!-- BUTTON -->
+
+            <button class="submit-btn">
+
+                Submit Order
+
+            </button>
+
+<div style="height:40px;"></div>
+
+<div class="important-note">
+
+    <h3>⚠ Important Information :</h3>
+
+    <p>
+        Handmade Pheta orders are shipped worldwide.
+    </p>
+
+    <p>
+        Shipping charges depend on destination country and quantity ordered.
+    </p>
+
+    <p>
+        Live wedding services include travel and accommodation charges.
+    </p>
+
+    <p>
+        Final quotation will be shared after order review.
+    </p>
+
+</div>
+        </form>
+
+    </section>
+    <footer>
+
+        © 2026 Chavan Pheta • Royal Indian Turbans
+
+    </footer>
+<a href="https://wa.me/919370968201"
+   class="whatsapp-float"
+   target="_blank">
+
+    💬
+
+</a>
+
+</body>
+</html>

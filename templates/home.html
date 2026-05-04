@@ -1,0 +1,592 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chavan Pheta | Royal Indian Turbans</title>
+
+    <!-- Google Fonts -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#050505;
+            color:white;
+            font-family:'Poppins', sans-serif;
+            overflow-x:hidden;
+        }
+
+        /* GOLD GLOW */
+
+        body::before{
+            content:'';
+            position:fixed;
+            width:500px;
+            height:500px;
+            background:rgba(255,215,0,0.08);
+            border-radius:50%;
+            top:-200px;
+            right:-100px;
+            filter:blur(120px);
+            z-index:-1;
+        }
+
+        /* TOP BAR */
+
+        .top-bar{
+            background:black;
+            color:gold;
+            text-align:center;
+            padding:12px;
+            font-size:14px;
+            letter-spacing:1px;
+            border-bottom:1px solid rgba(255,215,0,0.2);
+        }
+
+        /* NAVBAR */
+
+        nav{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            padding:22px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index:1000;
+
+            background:rgba(0,0,0,0.4);
+            backdrop-filter:blur(12px);
+
+            border-bottom:1px solid rgba(255,215,0,0.1);
+        }
+
+        .logo{
+            font-family:'Cinzel', serif;
+            font-size:42px;
+            color:gold;
+            font-weight:700;
+            line-height:1;
+        }
+
+        .logo span{
+            font-size:12px;
+            color:white;
+            letter-spacing:4px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:35px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:14px;
+            letter-spacing:2px;
+            transition:0.3s;
+            position:relative;
+        }
+
+        nav ul li a::after{
+            content:'';
+            position:absolute;
+            width:0%;
+            height:2px;
+            background:gold;
+            left:0;
+            bottom:-8px;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:gold;
+        }
+
+        nav ul li a:hover::after{
+            width:100%;
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:100vh;
+            padding:180px 8% 100px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:50px;
+        }
+
+        /* LEFT */
+
+        .hero-left{
+            width:50%;
+        }
+
+        .hero-left h3{
+            color:gold;
+            letter-spacing:5px;
+            margin-bottom:25px;
+            font-size:18px;
+        }
+
+        .hero-left h1{
+            font-size:90px;
+            line-height:1.1;
+            margin-bottom:25px;
+            font-family:'Cinzel', serif;
+        }
+
+        .hero-left p{
+            color:#bdbdbd;
+            font-size:18px;
+            line-height:1.9;
+            margin-bottom:45px;
+            width:90%;
+        }
+
+        /* BUTTONS */
+
+        .buttons{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:18px 42px;
+            border-radius:50px;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.4s;
+        }
+
+        .gold-btn{
+            background:gold;
+            color:black;
+        }
+
+        .gold-btn:hover{
+            background:white;
+            transform:translateY(-5px);
+        }
+
+        .dark-btn{
+            border:1px solid gold;
+            color:gold;
+        }
+
+        .dark-btn:hover{
+            background:gold;
+            color:black;
+        }
+
+        /* RIGHT IMAGE */
+
+        .hero-right{
+            width:50%;
+            position:relative;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .circle{
+            width:520px;
+            height:520px;
+            background:rgba(255,215,0,0.08);
+            border-radius:50%;
+            position:absolute;
+            filter:blur(10px);
+        }
+
+        .hero-right img{
+            width:100%;
+            max-width:620px;
+            position:relative;
+            z-index:2;
+
+            filter:drop-shadow(0px 0px 45px rgba(255,215,0,0.25));
+
+            animation:float 4s ease-in-out infinite;
+        }
+
+        @keyframes float{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-18px);
+            }
+
+            100%{
+                transform:translateY(0px);
+            }
+
+        }
+
+        /* FEATURES */
+
+        .features{
+            padding:40px 8% 100px;
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:25px;
+        }
+
+        .feature-card{
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,215,0,0.08);
+            padding:35px;
+            border-radius:25px;
+
+            backdrop-filter:blur(15px);
+
+            transition:0.4s;
+        }
+
+        .feature-card:hover{
+            transform:translateY(-10px);
+            border-color:gold;
+            box-shadow:0px 0px 25px rgba(255,215,0,0.08);
+        }
+
+        .feature-card h2{
+            color:gold;
+            margin-bottom:18px;
+            font-size:24px;
+        }
+
+        .feature-card p{
+            color:#bdbdbd;
+            line-height:1.8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1100px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero-left,
+            .hero-right{
+                width:100%;
+            }
+
+            .hero-left p{
+                width:100%;
+            }
+
+            .buttons{
+                justify-content:center;
+            }
+
+            .features{
+                grid-template-columns:1fr 1fr;
+            }
+
+        }
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+                gap:18px;
+            }
+
+            .hero-left h1{
+                font-size:58px;
+            }
+
+            .features{
+                grid-template-columns:1fr;
+            }
+
+            .circle{
+                width:350px;
+                height:350px;
+            }
+
+        }
+        /* WHATSAPP BUTTON */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(37,211,102,0.5);
+
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+footer{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    color:white;
+    background:#000;
+    border-top:1px solid rgba(255,215,0,0.2);
+    font-size:16px;
+}
+.why-choose{
+    padding:80px 10%;
+    background:#000;
+    text-align:center;
+}
+
+.why-choose h1{
+    color:#FFD700;
+    font-size:48px;
+    margin-bottom:50px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature-box{
+    background:#111;
+    border:1px solid rgba(255,215,0,0.2);
+    border-radius:20px;
+    padding:30px;
+}
+
+.feature-box h3{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.feature-box p{
+    color:white;
+    line-height:1.8;
+}
+    </style>
+
+</head>
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        👑 Handcrafted Royal Wedding Phetas • Live Pheta Tying • Worldwide Shipping
+
+    </div>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+
+            Chavan Pheta
+            <br>
+            <span>ROYAL INDIAN TURBANS</span>
+
+        </div>
+
+        <ul>
+
+           <li><a href="/">HOME</a></li>
+
+            <li><a href="/collection/">COLLECTIONS</a></li>
+
+            <li><a href="/weddings/">WEDDINGS</a></li>
+
+            <li><a href="/custom-orders/">CUSTOM ORDERS</a></li>
+
+            <li><a href="/contact/">CONTACT</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+            <h3>WELCOME TO ROYALTY</h3>
+
+            <h1>
+                Chavan
+                <br>
+                Pheta
+            </h1>
+
+            <p>
+
+                Premium handcrafted Indian Phetas & Safas
+                specially designed for weddings, royal events,
+                and cultural celebrations.
+
+                We provide custom wedding orders and live pheta tying services.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="/collection/" class="btn gold-btn">
+                Explore Collection
+
+                </a>
+
+               <a href="/weddings/" class="btn gold-btn">
+               Wedding Orders
+               </a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+       <div class="hero-right">
+
+       <img src="https://jewelemarket.com/cdn/shop/files/KL1001028GGre_2_a7a7055e-8c98-480d-a13b-ca7023842660.jpg?v=1768370070&width=1500" alt="Wedding Pheta">
+ 
+       </div>
+    </section>
+
+    <!-- FEATURES -->
+
+   
+    <!-- WHATSAPP BUTTON -->
+
+<a
+href="https://wa.me/919370968201?text=Hello%20Chavan%20Pheta,%20I%20want%20to%20order%20a%20wedding%20pheta."
+class="whatsapp-btn"
+target="_blank">
+
+</a>
+</body>
+</html>
+
+<section class="why-choose">
+
+    <h1>Why Choose Chavan Pheta?</h1>
+
+    <div class="features">
+
+        <div class="feature-box">
+            <h3>Handcrafted Phetas</h3>
+            <p>Traditional handcrafted Maharashtrian phetas made with care.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Worldwide Shipping</h3>
+            <p>We deliver handcrafted phetas across different countries.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Wedding Specialists</h3>
+            <p>Professional pheta styling for weddings and special events.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Custom Orders</h3>
+            <p>Customized pheta designs based on customer requirements.</p>
+        </div>
+
+    </div>
+
+</section>
+
+    <footer>
+    © 2026 Chavan Pheta • Royal Indian Turbans
+</footer>
+
+<a href="https://wa.me/919370968201"
+   class="whatsapp-float"
+   target="_blank">
+
+    💬
+
+</a>
+
+

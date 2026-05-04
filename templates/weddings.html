@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Services | Chavan Pheta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#050505;
+            color:white;
+            font-family:'Poppins', sans-serif;
+        }
+
+        /* NAVBAR */
+
+        nav{
+
+            width:100%;
+            padding:25px 8%;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            background:black;
+
+            border-bottom:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .logo{
+
+            font-size:42px;
+            color:gold;
+            font-family:'Cinzel', serif;
+            font-weight:700;
+
+        }
+
+        nav ul{
+
+            display:flex;
+            gap:35px;
+            list-style:none;
+
+        }
+
+        nav ul li a{
+
+            text-decoration:none;
+            color:white;
+
+            letter-spacing:2px;
+            font-size:14px;
+
+            transition:0.3s;
+
+        }
+
+        nav ul li a:hover{
+
+            color:gold;
+
+        }
+
+        /* HERO */
+
+        .hero{
+
+            padding:120px 8% 80px;
+
+            text-align:center;
+
+        }
+
+        .hero h1{
+
+            font-size:80px;
+            color:gold;
+
+            font-family:'Cinzel', serif;
+
+            margin-bottom:25px;
+
+        }
+
+        .hero p{
+
+            width:60%;
+            margin:auto;
+
+            color:#bdbdbd;
+
+            line-height:1.9;
+            font-size:18px;
+
+        }
+
+        /* SERVICES */
+
+        .services{
+
+            padding:20px 8% 120px;
+
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+
+            gap:35px;
+
+        }
+
+        .service-card{
+
+            background:#111;
+
+            border-radius:35px;
+
+            overflow:hidden;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+            transition:0.4s;
+
+        }
+
+        .service-card:hover{
+
+            transform:translateY(-10px);
+
+            box-shadow:
+            0px 0px 30px rgba(255,215,0,0.12);
+
+        }
+
+        .service-card img{
+
+            width:100%;
+            height:320px;
+
+            object-fit:cover;
+
+        }
+
+        .service-info{
+
+            padding:30px;
+
+        }
+
+        .service-info h2{
+
+            color:gold;
+            margin-bottom:18px;
+
+            font-size:28px;
+
+        }
+
+        .service-info p{
+
+            color:#d0d0d0;
+
+            line-height:1.8;
+
+            margin-bottom:25px;
+
+        }
+
+        .btn{
+
+            display:inline-block;
+
+            padding:14px 28px;
+
+            background:gold;
+            color:black;
+
+            text-decoration:none;
+
+            border-radius:40px;
+
+            font-weight:600;
+
+            transition:0.3s;
+
+        }
+
+        .btn:hover{
+
+            background:white;
+
+        }
+
+        /* PREMIUM SECTION */
+
+        .premium{
+
+            margin:0 8% 120px;
+
+            padding:80px;
+
+            text-align:center;
+
+            border-radius:40px;
+
+            background:
+            linear-gradient(
+            135deg,
+            rgba(255,215,0,0.08),
+            rgba(255,255,255,0.02)
+            );
+
+            border:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .premium h2{
+
+            font-size:60px;
+
+            color:gold;
+
+            font-family:'Cinzel', serif;
+
+            margin-bottom:25px;
+
+        }
+
+        .premium p{
+
+            width:70%;
+            margin:auto;
+
+            color:#cfcfcf;
+
+            line-height:1.9;
+            font-size:18px;
+
+            margin-bottom:40px;
+
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px){
+
+            .services{
+
+                grid-template-columns:1fr;
+
+            }
+
+            .hero p,
+            .premium p{
+
+                width:100%;
+
+            }
+
+        }
+
+        @media(max-width:768px){
+
+            nav{
+
+                flex-direction:column;
+                gap:20px;
+
+            }
+
+            nav ul{
+
+                flex-wrap:wrap;
+                justify-content:center;
+
+            }
+
+            .hero h1{
+
+                font-size:55px;
+
+            }
+
+            .premium h2{
+
+                font-size:40px;
+
+            }
+            
+
+        }
+        .service-card img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(37,211,102,0.5);
+
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+.btn-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:40px;
+
+}
+footer{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    color:white;
+    background:#000;
+    border-top:1px solid rgba(255,215,0,0.2);
+    font-size:16px;
+}
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+   <nav>
+
+    <div class="logo">
+
+        Chavan Pheta
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">HOME</a></li>
+
+        <li><a href="/collection/">COLLECTIONS</a></li>
+
+        <li><a href="/weddings/">WEDDINGS</a></li>
+
+        <li><a href="/custom-orders/">CUSTOM ORDERS</a></li>
+
+        <li><a href="/contact/">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Wedding Services</h1>
+
+        <p>
+
+            Premium handcrafted wedding pheta services,
+            live pheta tying, dulha special collections,
+            and royal celebration styling.
+
+        </p>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+        <img src="/static/images/orange-makkhi.jpeg">
+
+        <div class="service-info">
+
+            <h2>Orange Makkhi Pheta</h2>
+
+            <p>
+
+           Traditional royal pheta for weddings and special occasions.
+            </p>
+
+            <a href="/custom-orders/?pheta=Orange Makkhi Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card">
+
+        <img src="/static/images/red-check.jpeg">
+
+        <div class="service-info">
+
+            <h2>Red Chex Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Red Chex Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+        <img src="/static/images/red+white-vip1.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Red & White Pheta</h2>
+
+            <p>
+
+               Traditional royal pheta for weddings and special occasions.
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Red & White Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+        <img src="/static/images/white+goldenpatti1.jpeg">
+
+        <div class="service-info">
+
+            <h2>White & Golden Patti Pheta</h2>
+
+            <p>
+
+               Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=White & Golden Patti Pheta" class="btn">
+
+                Book Service
+            </a>
+
+        </div>
+
+    </div>
+
+     <!-- CARD 5 -->
+
+    <div class="service-card">
+
+        <img src="/static/images/banarasi-pattern0.jpeg">
+
+        <div class="service-info">
+
+            <h2>Banarasi Pattern Pheta</h2>
+
+            <p>
+
+              Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Banarasi Pattern Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 6-->
+
+    <div class="service-card">
+
+        <img src="/static/images/red-makkhi1.jpeg">
+
+        <div class="service-info">
+
+            <h2>Red Makkhi Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Red Makkhi Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+     <!-- CARD 7-->
+
+    <div class="service-card">
+
+        <img src="/static/images/plain-maroon1.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Royal Maroon Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Royal Maroon Pheta" class="btn">
+
+                Book Service
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 8-->
+
+    <div class="service-card">
+
+        <img src="/static/images/plain-yellow1.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Royal Yellow Pheta</h2>
+
+            <p>
+
+               Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Royal Yellow Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 9-->
+
+    <div class="service-card">
+
+        <img src="/static/images/white-plainvip1.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Royal White Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Royal White Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 10-->
+
+    <div class="service-card">
+
+        <img src="/static/images/pinkplain.jpeg">
+
+        <div class="service-info">
+
+            <h2>Plain Pink Pheta</h2>
+
+            <p>
+            Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Plain Pink Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 11-->
+
+    <div class="service-card">
+
+        <img src="/static/images/plain-orange1.jpeg">
+
+        <div class="service-info">
+
+            <h2>Plain Orange Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Plain Orange Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 12-->
+
+    <div class="service-card">
+
+        <img src="/static/images/pink-vip.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Pink Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Pink Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 13-->
+
+    <div class="service-card">
+
+        <img src="/static/images/cream+red copy.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Cream & Red Pheta</h2>
+
+            <p>
+                Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Cream & Red Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 14-->
+
+    <div class="service-card">
+
+        <img src="/static/images/maroon+white1.jpeg">
+
+        <div class="service-info">
+
+            <h2>VIP Maroon & White Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+
+            </p>
+
+            <a href="/custom-orders/?pheta=VIP Maroon & White Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    
+     <!-- CARD 15-->
+
+    <div class="service-card">
+
+        <img src="/static/images/laharipheta.jpeg">
+
+        <div class="service-info">
+
+            <h2>Lahari Pheta</h2>
+
+            <p>
+
+                Traditional royal pheta for weddings and special occasions.
+
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Lahari Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+     <!-- CARD 16-->
+
+    <div class="service-card">
+
+        <img src="/static/images/pista-makkhi.jpeg">
+
+        <div class="service-info">
+
+            <h2>Pista Makkhi Pheta</h2>
+
+            <p>
+
+             Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Pista Makkhi Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+     <!-- CARD 17-->
+
+    <div class="service-card">
+
+        <img src="/static/images/pink-makkhi.jpeg">
+
+        <div class="service-info">
+
+            <h2>Pink Makhhi Pheta</h2>
+
+            <p>
+
+             Traditional royal pheta for weddings and special occasions.
+
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Pink Makhhi Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+     <!-- CARD 18-->
+
+    <div class="service-card">
+
+        <img src="/static/images/pink-chex1.jpeg">
+
+        <div class="service-info">
+
+            <h2>Pink Chex Pheta</h2>
+
+            <p>
+
+            Traditional royal pheta for weddings and special occasions.
+
+            </p>
+
+            <a href="/custom-orders/?pheta=Pink Chex Pheta" class="btn">
+
+                Book Service
+
+            </a>
+
+        </div>
+
+    </div>
+
+    </section>
+
+
+
+    <!-- PREMIUM -->
+
+    <section class="premium">
+
+        <h2>Custom Wedding Orders</h2>
+
+        <p>
+
+           We provide premium handcrafted pheta collections,
+            dulha special designs, and live pheta tying services
+            for weddings and royal events.
+
+        </p>
+
+        <a href="/custom-orders/" class="btn">
+
+            Book Wedding Service
+
+        </a>
+
+    </section>
+    <footer>
+
+        © 2026 Chavan Pheta • Royal Indian Turbans
+
+    </footer>
+<a href="https://wa.me/919370968201"
+   class="whatsapp-float"
+   target="_blank">
+
+    💬
+
+</a>
+</body>
+</html>

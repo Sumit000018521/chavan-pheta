@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Chavan Pheta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            background:#050505;
+            color:white;
+            font-family:'Poppins', sans-serif;
+
+        }
+
+        /* NAVBAR */
+
+        nav{
+
+            width:100%;
+            padding:25px 8%;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            background:black;
+
+            border-bottom:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .logo{
+
+            font-size:42px;
+            color:gold;
+
+            font-family:'Cinzel', serif;
+            font-weight:700;
+
+        }
+
+        nav ul{
+
+            display:flex;
+            gap:35px;
+
+            list-style:none;
+
+        }
+
+        nav ul li a{
+
+            text-decoration:none;
+            color:white;
+
+            letter-spacing:2px;
+            font-size:14px;
+
+            transition:0.3s;
+
+        }
+
+        nav ul li a:hover{
+
+            color:gold;
+
+        }
+
+        /* HERO */
+
+        .hero{
+
+            padding:120px 8% 80px;
+
+            text-align:center;
+
+        }
+
+        .hero h1{
+
+            font-size:80px;
+            color:gold;
+
+            font-family:'Cinzel', serif;
+
+            margin-bottom:25px;
+
+        }
+
+        .hero p{
+
+            width:60%;
+            margin:auto;
+
+            color:#bdbdbd;
+
+            line-height:1.9;
+            font-size:18px;
+
+        }
+
+        /* CONTACT SECTION */
+
+        .contact-section{
+
+            padding:20px 8% 120px;
+
+            display:grid;
+            grid-template-columns:1fr 1fr;
+
+            gap:50px;
+
+        }
+
+        /* LEFT */
+
+        .contact-info{
+
+            background:#111;
+
+            padding:50px;
+
+            border-radius:35px;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .contact-info h2{
+
+            color:gold;
+
+            font-size:40px;
+
+            margin-bottom:35px;
+
+            font-family:'Cinzel', serif;
+
+        }
+
+        .info-box{
+
+            margin-bottom:35px;
+
+        }
+
+        .info-box h3{
+
+            color:gold;
+
+            margin-bottom:10px;
+
+            font-size:22px;
+
+        }
+
+        .info-box p{
+
+            color:#d0d0d0;
+
+            line-height:1.8;
+
+        }
+
+        /* FORM */
+
+        .contact-form{
+
+            background:#111;
+
+            padding:50px;
+
+            border-radius:35px;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .input-box{
+
+            margin-bottom:25px;
+
+        }
+
+        .input-box input,
+        .input-box textarea{
+
+            width:100%;
+
+            padding:18px;
+
+            background:#1a1a1a;
+
+            border:none;
+            outline:none;
+
+            border-radius:15px;
+
+            color:white;
+
+            font-size:16px;
+
+        }
+
+        .input-box textarea{
+
+            height:180px;
+
+            resize:none;
+
+        }
+
+        .submit-btn{
+
+            width:100%;
+
+            padding:18px;
+
+            border:none;
+
+            border-radius:50px;
+
+            background:gold;
+            color:black;
+
+            font-size:18px;
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.3s;
+
+        }
+
+        .submit-btn:hover{
+
+            background:white;
+
+        }
+
+        /* MAP */
+
+        .map-section{
+
+            padding:0 8% 120px;
+
+        }
+
+        .map-box{
+
+            width:100%;
+            height:450px;
+
+            border-radius:35px;
+
+            overflow:hidden;
+
+            border:1px solid rgba(255,215,0,0.08);
+
+        }
+
+        .map-box iframe{
+
+            width:100%;
+            height:100%;
+
+            border:none;
+
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px){
+
+            .contact-section{
+
+                grid-template-columns:1fr;
+
+            }
+
+            .hero p{
+
+                width:100%;
+
+            }
+
+        }
+
+        @media(max-width:768px){
+
+            nav{
+
+                flex-direction:column;
+                gap:20px;
+
+            }
+
+            nav ul{
+
+                flex-wrap:wrap;
+                justify-content:center;
+
+            }
+
+            .hero h1{
+
+                font-size:55px;
+
+            }
+
+            .contact-info,
+            .contact-form{
+
+                padding:30px;
+
+            }
+
+        }
+        footer{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    color:white;
+    background:#000;
+    border-top:1px solid rgba(255,215,0,0.2);
+    font-size:16px;
+}
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(37,211,102,0.5);
+
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+    <div class="logo">
+
+        Chavan Pheta
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">HOME</a></li>
+
+        <li><a href="/collection/">COLLECTIONS</a></li>
+
+        <li><a href="/weddings/">WEDDINGS</a></li>
+
+        <li><a href="/custom-orders/">CUSTOM ORDERS</a></li>
+
+        <li><a href="/contact/">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Contact Us</h1>
+
+        <p>
+
+            Connect with Chavan Pheta for premium
+            wedding services, royal pheta collections,
+            and custom handcrafted orders.
+
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact-section">
+
+        <!-- LEFT -->
+
+        <div class="contact-info">
+
+            <h2>Get In Touch</h2>
+
+            <div class="info-box">
+
+                <h3>Phone Number</h3>
+
+                <p>
+
+                    +91 9370968201
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>Email Address</h3>
+
+                <p>
+
+                    chavanpheta@gmail.com
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>Location</h3>
+
+                <p>
+
+                    Nashik, Maharashtra, India
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+       <form class="contact-form" method="POST">
+    {% csrf_token %}
+
+    <div class="input-box">
+        <input type="text"
+               name="name"
+               placeholder="Your Name"
+               required>
+    </div>
+
+    <div class="input-box">
+        <input type="email"
+               name="email"
+               placeholder="Your Email"
+               required>
+    </div>
+
+    <div class="input-box">
+        <input type="text"
+               name="phone"
+               placeholder="Phone Number"
+               required>
+    </div>
+
+    <div class="input-box">
+        <textarea
+            name="message"
+            placeholder="Write your message..."
+            required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+        Send Message
+    </button>
+
+</form>
+
+    </section>
+
+    <!-- MAP -->
+
+    <section class="map-section">
+
+        <div class="map-box">
+
+           <iframe
+src="https://maps.google.com/maps?q=20.007862,73.798300&t=&z=18&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+<a href="https://www.google.com/maps?q=20.007862,73.798300"
+   target="_blank"
+   class="submit-btn"
+   style="text-decoration:none;display:inline-block;text-align:center;margin-top:20px;">
+   Get Directions
+</a>
+
+        </div>
+
+    </section>
+    <footer>
+
+        © 2026 Chavan Pheta • Royal Indian Turbans
+
+    </footer>
+<a href="https://wa.me/919370968201"
+   class="whatsapp-float"
+   target="_blank">
+
+    💬
+
+</a>
+
+</body>
+</html>
