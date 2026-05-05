@@ -249,13 +249,13 @@
 
         /* FEATURES */
 
-        .features{
-            padding:40px 8% 100px;
-            display:grid;
-            grid-template-columns:repeat(4,1fr);
-            gap:25px;
-        }
-
+        
+        .features-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
         .feature-card{
             background:rgba(255,255,255,0.03);
             border:1px solid rgba(255,215,0,0.08);
@@ -550,7 +550,7 @@ target="_blank">
 <section class="why-choose">
 
     <h1>Why Choose Chavan Pheta?</h1>
-
+    <div class="features-container"></div>
     <div class="features">
 
         <div class="feature-box">
